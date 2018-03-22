@@ -35,7 +35,7 @@ public class Controller {
     /**
      * 将数据全部导入到一张表格
      */
-    @RequestMapping(value = "/getExcel/OnlyOne", method = RequestMethod.GET)
+    @RequestMapping(value = "/getExcel/onlyOne", method = RequestMethod.GET)
     public void createBoxListExcelOnlyOne(HttpServletResponse response) throws Exception {
         //创建文件本地文件
         String filePath = "人员数据.xlsx";
