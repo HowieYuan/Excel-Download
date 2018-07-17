@@ -85,7 +85,7 @@ public class Controller {
     @RequestMapping(value = "/getExcel", method = RequestMethod.GET)
     public void createBoxListExcel(HttpServletResponse response) throws Exception {
         //创建文件本地文件
-        String filePath = "人员数据.xlsx";
+        String filePath = "人员数据.xls";
         File dbfFile = new File(filePath);
         //首先要使用Workbook类的工厂方法创建一个可写入的工作薄(Workbook)对象
         WritableWorkbook wwb = Workbook.createWorkbook(dbfFile);
@@ -123,7 +123,7 @@ public class Controller {
         }
         wwb.write();//从内存中写入文件中
         wwb.close();//关闭资源，释放内存
-        String fileName = new String("人员信息.xlsx".getBytes(), "ISO-8859-1");
+        String fileName = new String("人员信息.xls".getBytes(), "ISO-8859-1");
         response.addHeader("Content-Disposition", "filename=" + fileName);
         OutputStream outputStream = response.getOutputStream();
         FileInputStream fileInputStream = new FileInputStream(filePath);
