@@ -38,7 +38,7 @@ public class Controller {
     @RequestMapping(value = "/getExcel/onlyOne", method = RequestMethod.GET)
     public void createBoxListExcelOnlyOne(HttpServletResponse response) throws Exception {
         //创建文件本地文件
-        String filePath = "人员数据.xlsx";
+        String filePath = "人员数据.xls";
         File dbfFile = new File(filePath);
         //首先要使用Workbook类的工厂方法创建一个可写入的工作薄(Workbook)对象
         WritableWorkbook wwb = Workbook.createWorkbook(dbfFile);
